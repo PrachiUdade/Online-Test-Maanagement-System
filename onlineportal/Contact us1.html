@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact us</title>
+	<style type="text/css">
+		.container
+		{
+			position: relative;
+			padding:50px;
+			background-color: aliceblue;
+			margin: 40px;
+			width: 30%;
+		}
+
+		form
+		{
+			position:left;
+			border-style: solid;
+		    border-width: 1px;
+            background-image: url("Blue.png");
+            background-size: cover;		
+        }
+        .structure
+        {
+        	display: grid;
+        	grid: auto auto / auto auto;
+        	margin-left: 70PX;
+
+
+        }
+        .stru{
+        	margin-left: 670px;
+        }
+         a 
+        {
+               text-decoration: none;
+             display: inline-block;
+             padding: 8px 16px;
+          }
+               .previous
+                {
+                background-color: #f1f1f1;
+          }
+          .button
+          {
+          	position: absolute;
+          	right: 50px;
+          	bottom: 50px;
+          }
+     body
+
+{
+background-image: url("Blue.png");
+            background-size: cover;	
+}		
+		
+	</style>
+     <script type="text/javascript">              
+
+    
+          
+          function validateform()
+          {
+               var name=document.myform.name.value;
+                var x=document.myform.email.value;
+               var atposition=x.indexOf("@");
+               var dotposition=x.lastIndexOf(".");
+               var comment=document.myform.comment.value;
+
+               if(firstname==null || firstname=="")
+               {
+                    alert("firstname cant be blank");
+                    return false;
+
+               }
+                else if(atposition<1 || dotposition<atposition +2 ||dotposition+2>=x.length)
+               {
+                    alert("please enter a valid email address\n atposition:"+atposition+"\n dotposition:"+dotposition);
+                    return false;
+               }
+                else if(comment==null || comment=="")
+               {
+                    alert("comment cant be blank");
+                    return false;
+
+               }
+          }
+
+          </script>
+     </head>
+     <body>
+
+	<form name="myform"  onsubmit="return validateform() "action="contact us.php" method="POST" >
+          <fieldset>
+        <center><h2>Contact us</h2></center><br>
+        <div class="stru"><b><u>Feedback Form</b></u></div>
+        <div class="structure">
+      	<div><br><br>
+      	<b><u>Address</u></b><br>
+      	Omkar nagar,Manewada,<br>Nagpur-440027.<br><br>
+      	<b><u>Contact</u></b><br>
+      	9307365288<br><br>
+      	<b><u>Email</u></b><br>
+      	prachiudade@gmail.com
+
+
+      </div>
+         
+       <div class="container" >
+        	
+        	<label> Name</label></br>
+		    <input type="text" name="name"><br><br>
+
+            <label>Email</label><br>
+		    <input type="text" name="email"><br/><br>
+            
+            <label>comment</label><br>
+            <input type="text" name="comment"><br><br>
+
+	        <input type="submit" value="Send"><br>
+	        
+        </div>
+      </div>
+        </fieldset>
+    </form>
+    <div class="button">
+<a href="index.php" class="previous">&laquo; Back</a>
+</div>
+
+
+		
+
+</body>
+</html>
